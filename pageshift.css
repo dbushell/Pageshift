@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/*!
+ * Pageshift
+ * Copyright © 2012 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
+
+#pageshift {
+    display: block;
+    position: absolute;
+    background: #222;
+    width: 100%
+    min-height: 100%;
+    -webkit-perspective: 2000px;
+       -moz-perspective: 2000px;
+        -ms-perspective: 2000px;
+         -o-perspective: 2000px;
+            perspective: 2000px;
+}
+
+.pageshift-body {
+    display: block;
+    position: relative;
+    width: 100%;
+    -webkit-transform: translate3d(0,0,0);
+       -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+         -o-transform: translate3d(0,0,0);
+           -transform: translate3d(0,0,0);
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+           -transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform-origin: 50% 50%;
+       -moz-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+         -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    opacity: 1;
+}
+
+div[class^="pageshift-"][class*="-out"] {
+    pointer-events: none;
+}
+
+div[class^="pageshift-"][class*="-enter"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/*!
+ * Pageshift - stack3d effect
+ * Copyright © 2012 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
+
+.pageshift-stack3d-out {
+    -webkit-transition: all 500ms ease;
+       -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+         -o-transition: all 500ms ease;
+            transition: all 500ms ease;
+    -webkit-transform: translate3d(0,0,-100px);
+       -moz-transform: translate3d(0,0,-100px);
+        -ms-transform: translate3d(0,0,-100px);
+         -o-transform: translate3d(0,0,-100px);
+            transform: translate3d(0,0,-100px);
+    opacity: .5;
+}
+
+.pageshift-stack3d-exit {
+    opacity: 0;
+}
+
+.pageshift-stack3d-enter {
+    -webkit-transform: translate3d(0,-500px,1000px);
+       -moz-transform: translate3d(0,-500px,-100px);
+        -ms-transform: translate3d(0,-500px,-100px);
+         -o-transform: translate3d(0,-500px,-100px);
+            transform: translate3d(0,-500px,-100px);
+    -webkit-transform-origin: 50% 0;
+       -moz-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+         -o-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+    opacity: 0;
+}
+
+.pageshift-stack3d-in {
+    -webkit-transition: all 500ms ease;
+       -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+         -o-transition: all 500ms ease;
+            transition: all 500ms ease;
+    -webkit-transform: translate3d(0,0,0);
+       -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+         -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+    opacity: 1;
+}
+
+/*!
+ * Pageshift - slide effect
+ * Copyright © 2012 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
+
+.pageshift-slide-out {
+    -webkit-transition: all 500ms ease;
+       -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+         -o-transition: all 500ms ease;
+            transition: all 500ms ease;
+    opacity: .7;
+}
+
+.pageshift-slide-exit {
+    -webkit-transform: translate3d(-100%,0,0);
+       -moz-transform: translate3d(-100%,0,0);
+        -ms-transform: translate3d(-100%,0,0);
+         -o-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
+    opacity: .3;
+}
+
+.pageshift-slide-enter {
+    -webkit-transform: translate3d(100%,0,0);
+       -moz-transform: translate3d(100%,0,0);
+        -ms-transform: translate3d(100%,0,0);
+         -o-transform: translate3d(100%,0,0);
+            transform: translate3d(100%,0,0);
+    opacity: 1;
+}
+
+.pageshift-slide-in {
+    -webkit-transition: all 500ms ease;
+       -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+         -o-transition: all 500ms ease;
+            transition: all 500ms ease;
+    -webkit-transform: translate3d(0,0,0);
+       -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+         -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+    opacity: 1;
+}
