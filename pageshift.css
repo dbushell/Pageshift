@@ -9,7 +9,7 @@
     display: block;
     position: absolute;
     background: #222;
-    width: 100%
+    width: 100%;
     min-height: 100%;
     -webkit-perspective: 2000px;
        -moz-perspective: 2000px;
